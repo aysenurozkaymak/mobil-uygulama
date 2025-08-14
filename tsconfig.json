@@ -1,3 +1,18 @@
 {
-  "extends": "@react-native/typescript-config"
+  "compilerOptions": {
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": false,
+    "allowJs": true
+  },
+  "include": ["App.tsx", "src/**/*", "declarations.d.ts"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }
