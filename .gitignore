@@ -1,10 +1,92 @@
-# OSX
-#
+# -------------------------
+# OS / Genel
+# -------------------------
 .DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.orig
+*.rej
+*.tmp
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Xcode
-#
+# -------------------------
+# VS Code / Editörler
+# -------------------------
+.vscode/*
+!.vscode/extensions.json   # İsterseniz ekipçe önerilen eklentileri takip edin
+# !.vscode/settings.json   # Takıma göre açabilirsiniz (genelde local kalır)
+# !.vscode/launch.json     # RN debug ayarı ekipçe paylaşılacaksa açın
+
+# JetBrains / Android Studio
+.idea
+*.iml
+
+# Vim / Diğer editör artıkları
+*.swp
+*.swo
+
+# -------------------------
+# Node.js / JS Ekosistemi
+# -------------------------
+node_modules/
+.eslintcache
+.cache/
+.parcel-cache/
+coverage/
+
+# Web bundler çıktıları
+dist/
+out/
+build/           # CRA / bazı tool’lar (Android/iOS build klasörleri ayrıca aşağıda var)
+storybook-static/
+
+# Framework özel
+.next/
+.nuxt/
+.svelte-kit/
+web-build/       # Expo web export
+
+# -------------------------
+# React Native / Metro / Expo
+# -------------------------
+.metro-cache/
+.metro-health-check*
+*.jsbundle
+
+.expo/
+.expo-shared/
+expo-debug.log
+
+# -------------------------
+# Android / IntelliJ
+# -------------------------
+android/.gradle/
+.gradle/
+local.properties
+.cxx/
 build/
+android/build/
+android/app/build/
+*.hprof
+
+# Keystore & paketler
+*.keystore
+*.jks
+!debug.keystore
+*.apk
+*.aab
+
+# -------------------------
+# iOS / Xcode
+# -------------------------
+ios/build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -22,51 +104,41 @@ DerivedData
 *.xcuserstate
 **/.xcode.env.local
 
-# Android/IntelliJ
-#
-build/
-.idea
-.gradle
-local.properties
-*.iml
-*.hprof
-.cxx/
-*.keystore
-!debug.keystore
-.kotlin/
+# CocoaPods
+**/Pods/
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
+# İmza / Sertifika
+*.mobileprovision
+*.cer
+*.p12
+*.p8
+*.pem
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
+# -------------------------
+# Ruby / CocoaPods / Fastlane
+# -------------------------
+/vendor/bundle/
 
 **/fastlane/report.xml
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
 
-# Bundle artifact
-*.jsbundle
+# -------------------------
+# Env dosyaları
+# -------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
 
-# Ruby / CocoaPods
-**/Pods/
-/vendor/bundle/
-
-# Temporary files created by Metro to check the health of the file watcher
+# -------------------------
+# Diğer
+# -------------------------
+# Metro sağlık dosyası (RN)
 .metro-health-check*
 
-# testing
-/coverage
-
-# Yarn
+# Yarn (Berry) cache’leri
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
